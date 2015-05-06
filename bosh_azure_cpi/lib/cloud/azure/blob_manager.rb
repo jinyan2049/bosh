@@ -257,9 +257,8 @@ module Bosh::AzureCloud
         file_blocks = Array.new
         file_mutex = Mutex.new
 
-        block_size = 2**20
-        # MD5 hash of an empty content of a 2**20 block is b6d81b360a5672d80c27430f39153e2c
-        ignore_hash = 'b6d81b360a5672d80c27430f39153e2c'
+        block_size = 2**22
+        ignore_hash = get_ignore_hash_for_empty_block(block_size)
 
         start_time = Time.new
         threads << Thread.new {
@@ -281,6 +280,12 @@ module Bosh::AzureCloud
       end
     end
 
+    def get_ignore_hash_for_empty_block(size)
+      File.open('/tmp/calaculate_hash_for_empty_content', 'w+') do |f|
+        f.truncate(size)
+        hash = Digest::MD5.hexdigest(f.read)
+      end
+    end
   end
   
   class ::File

@@ -113,7 +113,7 @@ module Bosh::AzureCloud
         ret = invoke_azure_js_with_id(["get", instance_id, "Microsoft.Compute/virtualMachines"])
         unless ret.nil?
           vm = JSON(ret)
-          publicip = invoke_azure_js_with_id(["get", instance_id, "Microsoft.Network/publicIPAddresses",'--silence'])
+          publicip = invoke_azure_js_with_id(["get", instance_id, "Microsoft.Network/publicIPAddresses", '--silence'])
           publicip = JSON(publicip) unless publicip.nil?
           dipaddress = publicip.nil? ? nil : publicip["properties"]["ipAddress"]
           data_disks = []
@@ -179,7 +179,7 @@ module Bosh::AzureCloud
       disks.each do |disk|
         begin
           @disk_manager.delete_disk(disk)
-        rescue
+        rescue => e
           @logger.warn("Cannot delete disk #{disk} for #{instance_id}: #{e.message}\n#{e.backtrace.join("\n")}")
         end
       end
