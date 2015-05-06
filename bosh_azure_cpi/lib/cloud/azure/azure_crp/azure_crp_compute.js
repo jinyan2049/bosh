@@ -240,7 +240,7 @@ var waitDeploymentSuccess = function (doDeployTask, id, resourcegroup, deploymen
                       finishedCallback(RETRY, "Retry internal error");
                     }
                     else {
-                      finishedCallback(ABORT, "deployment failed " + err_msg);
+                      finishedCallback(err_msg, "deployment failed " + err_msg);
                     }
                   });
             }, 30000);
