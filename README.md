@@ -13,23 +13,29 @@ deployment and lifecycle management of large scale distributed services.
 
 ## Install
 
-To install the latest BOSH CLI:
+To install the Azure BOSH CLI:
 
 ```
-gem install bosh_cli
+sudo apt-get update
+sudo apt-get install git
 
-# Plugin required for deploying MicroBOSH
-gem install bosh_cli_plugin_micro
+git clone https://github.com/Azure/bosh.git
 
-# Plugin required for 'bosh aws create' and bootstrap commands
-gem install bosh_cli_plugin_aws
+cd bosh/deploy_for_azure
+./install.sh
 ```
 
+You can download stemcell for Azure from http://cloudfoundry.blob.core.windows.net/stemcell/stemcell.tgz
+
+To configure Azure, you can reference deploy_for_azure/guide.doc
+
+To deploy MicroBosh, you can reference deploy_for_azure/config/micro_bosh.yml.
+
+To deploy single VM cloud foundry, you can reference deploy_for_azure/config/micro_cf.yml.
 
 ## File a bug
 
-Bugs can be filed using Github Issues within the various repositories of the
-[Cloud Foundry](http://github.com/cloudfoundry) components.
+Bugs can be filed using Github Issues.
 
 
 ## Contributing
