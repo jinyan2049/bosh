@@ -10,6 +10,22 @@
 Cloud Foundry BOSH is an open source tool chain for release engineering,
 deployment and lifecycle management of large scale distributed services.
 
+## Azure Resource Template
+
+Recommend you to use Azure resource template to configure your Azure account and configure dev machine.
+Azure Resource Template: https://github.com/Azure/azure-quickstart-templates/microbosh-setup
+
+Or you can do it by following the guide.
+
+## Configure your Azure Account
+
+To configure your Azure account, you can reference deploy_for_azure/guide.doc
+
+## Configure Dev Machine
+
+Currently MicroBOSH can only be deployed from a virtual machine in the same VNET on Azure.
+After you configure your azure account, please create a VM in your VNET. 
+Recommend you to use Ubuntu Server 14.04LTS. If you use other distros, please update install.sh before executing it.
 
 ## Install
 
@@ -27,8 +43,6 @@ cd bosh/deploy_for_azure
 
 You can download stemcell for Azure from http://cloudfoundry.blob.core.windows.net/stemcell/stemcell.tgz
 
-To configure Azure, you can reference deploy_for_azure/guide.doc
-
 To deploy MicroBosh, you can reference deploy_for_azure/config/micro_bosh.yml.
 
 To deploy single VM cloud foundry, you can reference deploy_for_azure/config/micro_cf.yml.
@@ -36,7 +50,6 @@ To deploy single VM cloud foundry, you can reference deploy_for_azure/config/mic
 ## File a bug
 
 Bugs can be filed using Github Issues.
-
 
 ## Contributing
 
