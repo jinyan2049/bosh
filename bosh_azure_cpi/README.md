@@ -9,7 +9,7 @@ These options are passed to the Azure CPI when it is instantiated.
 * `environment` (required)
   The environment for Azure Management Service: AzureCloud or AzureChinaCloud
 * `api_version` (required)
-  The API version of Azure Management Service
+  The API version of Azure Management Service. 2015-05-01-preview
 * `subscription_id` (required)
   Azure Subscription Id
 * `storage_account_name` (required)
@@ -25,9 +25,9 @@ These options are passed to the Azure CPI when it is instantiated.
 * `client_secret` (required)
   The client secret for your service principal
 * `ssh_certificate` (required)
-  Base64 encoding content of the default certificate to use when spinning up new vms
+  The content of the default certificate to use when spinning up new vms
 * `ssh_private_key` (required)
-  Base64 encoding content of the default private key to use when spinning up new vms
+  The content of the default private key to use when spinning up new vms
 * `container_name` (optional)
   Contianer name in Azure storage account, defaults to 'bosh'
 
