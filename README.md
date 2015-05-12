@@ -13,7 +13,7 @@ deployment and lifecycle management of large scale distributed services.
 ## Azure Resource Template
 
 Recommend you to use Azure resource template to configure your Azure account and configure dev machine.
-Azure Resource Template: https://github.com/Azure/azure-quickstart-templates/microbosh-setup
+Azure Resource Template: https://github.com/Azure/azure-quickstart-templates/tree/master/microbosh-setup
 
 Or you can do it by following the guide.
 
