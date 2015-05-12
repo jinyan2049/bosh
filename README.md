@@ -10,18 +10,13 @@
 Cloud Foundry BOSH is an open source tool chain for release engineering,
 deployment and lifecycle management of large scale distributed services.
 
-## Azure Resource Template
+## Configure Azure Environment
 
-Recommend you to use Azure resource template to configure your Azure account and configure dev machine.
+Recommend you to reference the guide deploy_for_azure/guide_template.doc to configure your Azure account and dev machine.
+
 Azure Resource Template: https://github.com/Azure/azure-quickstart-templates/tree/master/microbosh-setup
 
-Or you can do it by following the guide.
-
-## Configure your Azure Account
-
-To configure your Azure account, you can reference deploy_for_azure/guide.doc
-
-## Configure Dev Machine
+Or you can do it step by step by following the guide deploy_for_azure/guide.doc.
 
 Currently MicroBOSH can only be deployed from a virtual machine in the same VNET on Azure.
 After you configure your azure account, please create a VM in your VNET. 
