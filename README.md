@@ -12,11 +12,9 @@ deployment and lifecycle management of large scale distributed services.
 
 ## Configure Azure Environment
 
-Recommend you to reference the guide deploy_for_azure/guide_template.doc to configure your Azure account and dev machine.
+Recommend you to reference the guide [deploy_for_azure/guide_template.doc](https://raw.githubusercontent.com/Azure/bosh/azure_cpi_crp/deploy_for_azure/guide_template.doc) to use [Azure Resource Template](https://github.com/Azure/azure-quickstart-templates/tree/master/microbosh-setup) to configure your Azure account and dev machine.
 
-Azure Resource Template: https://github.com/Azure/azure-quickstart-templates/tree/master/microbosh-setup
-
-Or you can do it step by step by following the guide deploy_for_azure/guide.doc.
+Or you can do it step by step by following the guide [deploy_for_azure/guide.doc](https://raw.githubusercontent.com/Azure/bosh/azure_cpi_crp/deploy_for_azure/guide.doc).
 
 Currently MicroBOSH can only be deployed from a virtual machine in the same VNET on Azure.
 After you configure your azure account, please create a VM in your VNET. 
