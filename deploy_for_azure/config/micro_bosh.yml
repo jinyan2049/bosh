@@ -48,4 +48,3 @@ apply_spec:
     nats:{address: 10.0.0.5}
   properties:
     registry:{address: 10.0.0.5}
-
